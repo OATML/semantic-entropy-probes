@@ -5,8 +5,8 @@
 # SBATCH --job-name="nlg_uncertainty_linearprobe"
 
 # Update conda environment (adjust as appropriate)
-~/miniconda3/bin/conda-env update -f ../environment_export.yaml
-source ~/miniconda3/bin/activate llm
+~/miniconda3/bin/conda-env update -f ../sep_environment.yaml
+source ~/miniconda3/bin/activate se_probes
 
 datasets=("squad" "nq" "trivia_qa" "bioasq")
 
