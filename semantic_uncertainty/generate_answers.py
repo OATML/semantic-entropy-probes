@@ -178,7 +178,7 @@ def main(args):
                 # Temperature for first generation is always `0.1`.
                 temperature = 0.1 if i == 0 else args.temperature
 
-                predicted_answer, token_log_likelihoods, (embedding, emb_last_before_gen, emb_before_eos) = model.predict(local_prompt, temperature, return_latent=True) 
+                predicted_answer, token_log_likelihoods, (embedding, emb_before_eos, emb_last_before_gen) = model.predict(local_prompt, temperature, return_latent=True) 
                 
                 # Last token embedding
                 embedding = embedding.cpu() if embedding is not None else None
